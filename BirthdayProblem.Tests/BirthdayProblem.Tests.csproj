@@ -10,6 +10,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="JsonTests.json" />
+    <None Remove="test.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="JsonTests.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="test.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CsvHelper" Version="31.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
     <PackageReference Include="xunit" Version="2.4.2" />
@@ -25,12 +39,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BirthdayProblem.Service\BirthdayProblem.Service.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="test.csv">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

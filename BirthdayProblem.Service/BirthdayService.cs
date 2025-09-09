@@ -11,6 +11,11 @@ public class BirthdayService
 
     public bool IsBirthdayToday(DateTime birthday)
     {
-        return birthday.Month == _today.Month && birthday.Day == _today.Day;
-    }
+        bool isToday = birthday.Month == _today.Month && birthday.Day == _today.Day;
+        if(!isToday && birthday.Month == 2 && birthday.Day == 29)
+        {
+            isToday = _today.Month == 2 && _today.Day == 28 && !DateTime.IsLeapYear(_today.Year);
+        }
+        return isToday;
+    } 
 }

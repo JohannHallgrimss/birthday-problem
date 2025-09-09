@@ -51,4 +51,51 @@ public class BirthdayServiceTests
         // Assert
         Assert.False(result);
     }
+
+    [Fact]
+    [Trait("Category", "Unit")]
+    public void IsBirthdayToday_LeepYear_ReturnsTrue()
+    {
+        // Arrange
+        var birthday = new DateTime(2000, 2, 29);
+        var today = new DateTime(2025, 2, 28);
+        var service = new BirthdayService(today);
+
+        // Act
+        bool result = service.IsBirthdayToday(birthday);
+
+        // Assert
+        Assert.True(result);
+    }
+
+    [Fact]
+    [Trait("Category", "Unit")]
+    public void IsBirthdayToday_LeepYear_LeepYearDay_ReturnsTrue()
+    {
+        // Arrange
+        var birthday = new DateTime(2000, 2, 29);
+        var today = new DateTime(2024, 2, 29);
+        var service = new BirthdayService(today);
+
+        // Act
+        bool result = service.IsBirthdayToday(birthday);
+
+        // Assert
+        Assert.True(result);
+    }
+    [Fact]
+    [Trait("Category", "Unit")]
+    public void IsBirthdayToday_LeepYear_OnLeepYear_ReturnsFalse()
+    {
+        // Arrange
+        var birthday = new DateTime(2000, 2, 29);
+        var today = new DateTime(2024, 2, 28);
+        var service = new BirthdayService(today);
+
+        // Act
+        bool result = service.IsBirthdayToday(birthday);
+
+        // Assert
+        Assert.False(result);
+    }
 }

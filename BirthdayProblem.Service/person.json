@@ -12,7 +12,15 @@
     "dateOfBirth": "1962-02-27T00:00:00Z"
   },
   {
+    "fullName": "Joe OneForthAge",
+    "dateOfBirth": "1980-02-29T00:00:00Z"
+  },
+  {
+    "fullName": "Joe Fullage",
+    "dateOfBirth": "1980-02-28T00:00:00Z"
+  },
+  {
     "fullName": "Plato",
-    "dateOfBirth": "0428-02-27T00:00:00Z"
+    "dateOfBirth": "1980-09-09T00:00:00Z"
   }
 ]

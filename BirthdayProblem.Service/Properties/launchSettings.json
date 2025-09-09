@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BirthdayProblem.Service": {
+      "commandName": "Project",
+      "commandLineArgs": "person.json"
+    }
+  }
+}
